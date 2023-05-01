@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+/* body font:  16px*/
+/* - Mobile: 375px
+- Desktop: 1440px */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* custom variable */
+:root {
+  /***************/
+  /***  color  ***/
+  /***************/
+  /* text */
+
+  /* sub-heading at the top of the app UI */
+  --pale-violet: hsl(276, 100%, 81%);
+  /* chat on the left */
+  --moderate-violet: hsl(276, 55%, 52%);
+  /* main heading */
+  --very-dark-violet: hsl(271, 36%, 24%);
+  /* placeholder text */
+  --light-gray: hsl(206, 6%, 79%);
+  /* paragraph */
+  --dark-gray: hsl(270, 7%, 64%);
+  /* chat on the right */
+  --dark-violet: hsl(271, 15%, 43%);
+
+  /* gradient */
+  /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+  --light-magenta: hsl(264, 100%, 61%);
+  --light-violet: hsl(264, 100%, 61%);
+
+  /* secondary */
+  --white: hsl(0, 0%, 100%);
+  /* app background */
+  --light-grayish-violet: hsl(270, 20%, 96%);
+  /* submit button background */
+  --very-dark-violet: hsl(271, 36%, 24%);
+  /* radio button outline */
+  --very-light-magenta: hsl(289, 100%, 72%);
+
+  /***************/
+  /***  font   ***/
+  /***************/
+  --fs-normal: 16px;
+  --ff-sans: "Rubik", sans-serif;
+}
+
+/* utility class */
+.subheading-color {
+  color: var(--pale-violet);
+}
+
+.left-chat-color {
+  color: var(--moderate-violet);
+}
+
+.right-chat-color {
+  color: var(--dark-violet);
+}
+
+.placeholder-text-color {
+  color: var(--light-gray);
+}
+
+.main-heading-color {
+  color: var(--very-dark-violet);
+}
+
+.paragraph-color {
+  color: var(--dark-gray);
+}
+
+.app-background-color {
+  background-color: var(--light-grayish-violet);
+}
+
+.submit-button-background-color {
+  background-color: var(--very-dark-violet);
+}
+
+.radio-button-outline-color {
+  outline-color: var(--light-magenta);
+}
+
+.fw-normal {
+  font-weight: 400;
+}
+
+.fw-slightly-bold {
+  font-weight: 500;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+
+
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
