@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
-/* body font:  16px*/
-/* - Mobile: 375px
-- Desktop: 1440px */
 
 /*
   1. Use a more-intuitive box-sizing model.
@@ -88,7 +85,7 @@ h6 {
 
   /* gradient */
   /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
-  --light-magenta: hsl(264, 100%, 61%);
+  --light-magenta: hsl(293, 100%, 63%);
   --light-violet: hsl(264, 100%, 61%);
 
   /* secondary */
@@ -156,10 +153,242 @@ h6 {
   font-weight: 700;
 }
 
+.ff-serif {
+  font-family: var(--ff-sans);
+}
 
+.fs-normal {
+  font-size: var(--fs-normal);
+}
 
+.text-center {
+  text-align: center;
+}
 
+.align-right {
+  margin-left: auto;
+  margin-right: 0;
+}
+/* end utility class */
+/* remove this */
+/* * {
+  outline: 1px solid rgba(255, 0, 0, 0.2);
+} */
 
+body {
+  background-color: beige;
+}
+
+button {
+  padding: 0;
+}
+
+/* main page */
+.page {
+  padding: 4rem 2rem;
+}
+
+/* styling for illustration*/
+.phone {
+  --phone-bang-height: 18px;
+  --phone-font-size: calc(var(--fs-normal) * 0.5);
+  width: 100%;
+  max-width: 228px;
+  margin-inline: auto;
+  margin-bottom: 3.5rem;
+  border-radius: 1rem;
+  outline: 10px solid white;
+  position: relative;
+  font-size: var(--phone-font-size);
+}
+
+.phone__bang {
+  width: 135px;
+  height: var(--phone-bang-height);
+  border-radius: 0 0 1rem 1rem;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.phone-app__header {
+  font-size: calc(var(--fs-normal) * 0.7);
+  background: linear-gradient(
+    to left,
+    var(--light-magenta),
+    var(--light-violet)
+  );
+  border-radius: 0 0 8px 8px;
+}
+
+.phone-app__header-wrapper {
+  padding: 10px;
+  padding-top: calc(var(--phone-bang-height) + 10px); /*overwrite*/
+  display: flex;
+}
+
+.phone-app__profile {
+  display: flex;
+  align-items: center;
+}
+
+.phone-app__profile-name {
+  color: var(--white);
+}
+
+.phone-app__status {
+  color: #d070ff;
+  font-size: 8px;
+}
+
+.phone-app__profile-img {
+  width: 30px;
+  aspect-ratio: 1;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-inline: 6px;
+  align-self: center;
+}
+
+.phone-app__btn {
+  background: unset;
+  border: unset;
+  filter: invert(100%) sepia(97%) saturate(0%) hue-rotate(13deg)
+    brightness(103%) contrast(105%);
+}
+
+.phone-app__back-btn > img {
+  width: 12px;
+  aspect-ratio: 1;
+}
+
+.phone-app__menu-btn {
+  margin-left: auto;
+  filter: invert(94%) sepia(47%) saturate(3737%) hue-rotate(253deg)
+    brightness(103%) contrast(105%);
+}
+/* end upper part */
+
+/* chat */
+
+.phone-chat-wrapper {
+  padding: 8px;
+}
+
+.phone-chat__bubble {
+  --br-bubble: 8px;
+  width: fit-content;
+  max-width: 126px;
+  padding: 6px;
+  margin-bottom: 6px;
+  border-radius: var(--br-bubble);
+}
+
+.phone-chat__bubble--primary {
+  background-color: #efe4f5;
+  color: var(--moderate-violet);
+}
+
+.phone-chat__bubble--secondary {
+  background-color: var(--white);
+  color: var(--dark-violet);
+}
+
+.phone-chat__bubble--primary + .align-right,
+.align-right + .phone-chat__bubble--primary {
+  margin-top: 12px;
+}
+
+.phone-chat__bubble--images {
+  display: flex;
+  justify-content: end;
+  gap: 8px;
+  max-width: unset;
+  padding: unset;
+}
+
+.phone-chat__bubble--images > * {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: var(--br-bubble);
+}
+
+.phone-chat__bubble--action {
+  background: linear-gradient(
+    to right,
+    var(--light-magenta),
+    var(--light-violet)
+  );
+  max-width: 160px;
+  width: 100%;
+  padding: 0.5rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.phone-chat__bubble--action-btn {
+  display: inline-block;
+  width: 12px;
+  aspect-ratio: 1;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.phone-chat__bubble--action-title {
+  color: #f9a1ff;
+}
+
+.phone-chat__bubble--action-price {
+  color: var(--white);
+  font-size: calc(var(--fs-normal) * 0.7);
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.phone-chat__input {
+  width: 100%;
+  height: 28px;
+  background-color: var(--white);
+  border-radius: 3rem;
+  position: relative;
+  margin-top: 16px;
+}
+
+.phone-chat__input-placeholder {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  opacity: 0.25;
+}
+
+.phone-chat__input-btn {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: black;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+
+.phone-chat__input-btn > img {
+  width: 10px;
+  position: relative;
+  left: 1px;
+  filter: invert(97%) sepia(2%) saturate(149%) hue-rotate(209deg)
+    brightness(116%) contrast(100%);
+}
+
+.page__headline {
+  margin-bottom: 1.25rem;
+}
 
 .attribution {
   font-size: 11px;

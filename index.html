@@ -10,80 +10,91 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <main id="page">
+<body class="fs-normal ff-serif ">
+  <main class="page">
     <div class="page__container">
       <!-- illustration -->
       <div class="page__illustration phone">
-        <div class="phone__bang"></div> 
-        <div class="app app__header">
-          <div class="app__header-wrapper">
-            <button class="app__back-btn"></button>
-            <div class="app__profile">
-              <img class="app__profile-img" src="" alt="">
-              <div>
-                <p class="app__profile-name">Samuel Green</p>
-                <p class="app__status">Available to Walk</p>
+        <div class="phone__bang"></div>
+        <div class="phone-app app-background-color">
+          <div class="phone-app__header">
+            <div class="phone-app__header-wrapper">
+              <button class="phone-app__btn phone-app__back-btn">
+                <img src="./images/arrow_backward.svg" alt="backward button">
+              </button>
+              <div class="phone-app__profile">
+                <img class="phone-app__profile-img" src="./images/avatar.jpg" alt="avatar">
+                <div>
+                  <p class="phone-app__profile-name">Samuel Green</p>
+                  <p class="phone-app__status">Available to Walk</p>
+                </div>
               </div>
+              <button class="phone-app__btn phone-app__menu-btn">
+                <img src="./images/more_vertically.svg" alt="more option button">
+              </button>
             </div>
           </div>
-        </div>
-        <div class="chat">
-          <div class="chat-wrapper">
-            <div class="chat__bubble chat__bubble--primary">
-              That sounds great. I’d be happy with that.
-            </div>
-            <div class="chat__bubble chat__bubble--primary">
-              Could you send over some pictures of your dog, please?
-            </div>
-            <div class="chat__bubble chat__bubble--images">
-              <!-- <img src="" alt="">
-              <img src="" alt="">
-              <img src="" alt=""> -->
-            </div>
-            <div class="chat__bubble chat__bubble--secondary">
-              Here are a few pictures. She’s a happy girl!
-            </div>
-            <div class="chat__bubble chat__bubble--secondary">
-              Can you make it?
-            </div>
-            <div class="chat__bubble chat__bubble--primary">
-              She looks so happy! The time we discussed works. How long shall I take her out for?
-            </div>
-            <div class="chat__bubble chat__bubble--action">
-              <span class="chat__bubble--action-btn"></span>
-              <span class="chat__bubble--action-title">
-                30 minute walk
-              </span>
-              <span class="chat__bubble--action-price">
-                $29
-              </span>
-            </div>
-            <div class="chat__bubble chat__bubble--action">
-              <span class="chat__bubble--action-btn"></span>
-              <span class="chat__bubble--action-title">
-                1 hour walk
-              </span>
-              <span class="chat__bubble--action-price">
-                $49
-              </span>
-            </div>
-            <div class="chat__input">
-              <button class="chat__input-btn"></button>
+          <div class="phone-chat">
+            <div class="phone-chat-wrapper">
+              <div class="phone-chat__bubble phone-chat__bubble--primary">
+                That sounds great. I’d be happy with that.
+              </div>
+              <div class="phone-chat__bubble phone-chat__bubble--primary">
+                Could you send over some pictures of your dog, please?
+              </div>
+              <div class="phone-chat__bubble phone-chat__bubble--images align-right">
+                <img src="./images/dog-image-1.jpg" alt="">
+                <img src="./images/dog-image-2.jpg" alt="">
+                <img src="./images/dog-image-3.jpg" alt="">
+              </div>
+              <div class="phone-chat__bubble phone-chat__bubble--secondary align-right">
+                Here are a few pictures. She’s a happy girl!
+              </div>
+              <div class="phone-chat__bubble phone-chat__bubble--secondary align-right">
+                Can you make it?
+              </div>
+              <div class="phone-chat__bubble phone-chat__bubble--primary">
+                She looks so happy! The time we discussed works. How long shall I take her out for?
+              </div>
+              <div class="phone-chat__bubble phone-chat__bubble--action">
+                <div class="phone-chat__bubble--action-btn"></div>
+                <div class="phone-chat__bubble--action-title">
+                  30 minute walk
+                </div>
+                <div class="phone-chat__bubble--action-price">
+                  $29
+                </div>
+              </div>
+              <div class="phone-chat__bubble phone-chat__bubble--action">
+                <div class="phone-chat__bubble--action-btn"></div>
+                <div class="phone-chat__bubble--action-title">
+                  1 hour walk
+                </div>
+                <div class="phone-chat__bubble--action-price">
+                  $49
+                </div>
+              </div>
+              <div class="phone-chat__input">
+                <span class="phone-chat__input-placeholder">Type a message ...</span>
+                <button class="phone-chat__input-btn">
+                  <img src="./images/arrow_forward.svg" alt="sending button">
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <!-- main part -->
-      <div>
-        <h1 class="page__headline">
+      <div class="text-center">
+        <h1 class="page__headline fw-slightly-bold main-heading-color">
           Simple booking
         </h1>
-        <h3 class="page__subheading">
-          Stay in touch with our dog walkers through the chat interface. This makes it easy to
-          discuss arrangements and make bookings. Once the walk has been completed you can rate
-          your walker and book again all through the chat.
-        </h3>
+        <p class="page__subheading fw-normal paragraph-color">
+          Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements
+          and
+          make bookings. Once the walk has been completed you can rate your walker and book again all through the
+          chat.
+        </p>
       </div>
     </div>
   </main>
