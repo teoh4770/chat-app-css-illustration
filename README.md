@@ -1,92 +1,90 @@
 # Frontend Mentor - Chat app CSS illustration
+## Table of contents
 
-![Design preview for the Chat app CSS illustration coding challenge](./design/desktop-preview.jpg)
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-## Welcome! 👋
+## Overview
 
-Thanks for checking out this front-end coding challenge.
+### Screenshot
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+- Mobile View
 
-**To do this challenge, you need a strong understanding of HTML and CSS.**
+![Screen Shot 2023-05-01 at 14 34 08](https://user-images.githubusercontent.com/98545971/235507562-6661bf02-c93e-45a8-ac49-ac54a6cf273d.png)
 
-## The challenge
+- Desktop view
 
-Your challenge is to build out this feature illustration using HTML & CSS and get it looking as close to the design as possible.
+![Screen Shot 2023-05-01 at 14 34 42](https://user-images.githubusercontent.com/98545971/235507670-ea77b543-96e3-4517-b3fb-4cf659bd2aad.png)
 
-The only assets we provide in this challenge are the image of the person in the app UI and the 3 images of the dog. You need to create everything else using HTML & CSS!
+### Links
 
-Your users should be able to:
+- Solution URL: [https://github.com/teoh4770/chat-app-css-illustration](https://github.com/teoh4770/chat-app-css-illustration)
+- Live Site URL: [https://teoh4770.github.io/chat-app-css-illustration/](https://teoh4770.github.io/chat-app-css-illustration/)
 
-- View the optimal layout for the component depending on their device's screen size
-- **Bonus**: See the chat interface animate on the initial load
+## My process
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Built with
 
-## Where to find everything
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- BEM naming convention
+- Custom UI Background and animation
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### What I learned
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+To see how you can add code snippets, 
+see below:
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+html
+```
+<div class="blob blob--primary rotate"></div>
+<div class="blob blob--secondary rotate"></div>
+```
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+css
+```
+/* 1. creating a blob shape div with border-radius */
+.blob {
+  --blob-width: 432px;
+  --half: calc(var(--blob-width) * -0.2);
+  position: absolute;
+  width: var(--blob-width);
+  aspect-ratio: 1;
+  border-radius: 43% 57% 29% 71% / 35% 71% 29% 65%;
+  background: linear-gradient(var(--light-magenta), var(--light-violet));
+}
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+/* 2. using sibling selector to apply styling  */
+.phone-chat__bubble--primary + .align-right,
+.align-right + .phone-chat__bubble--primary {
+  margin-top: 12px;
+}
 
-## Building your project
+/* 3. implement the rotation animation to blob */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+```
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### Useful resources
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+- [Creating blob shape with border-radius](https://9elements.github.io/fancy-border-radius/)
+- [Google icons](https://fonts.google.com/icons)
 
-## Deploying your project
+## Author
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+- Website - [CheeKianTeoh](https://github.com/teoh4770/)
+- Frontend Mentor - [teoh4770](https://www.frontendmentor.io/profile/teoh4770)
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
-
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
-
-## Create a custom `README.md`
-
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
-
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
